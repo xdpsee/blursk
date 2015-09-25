@@ -1,0 +1,21 @@
+/* config.h.in.  Generated automatically from configure.in by autoheader.  */
+#define PACKAGE "Blursk"
+#define VERSION "1.3"
+#define HAVE_XV	1
+#define HAVE_DL 1
+
+/* Define if you have the <dlfcn.h> header file. */
+#undef HAVE_DLFCN_H
+
+/* Name of package */
+#undef PACKAGE
+
+/* Define if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+/* Version number of package */
+#undef VERSION
+
+/* Define as `__inline' if that's what the C compiler calls it, or to nothing
+   if it is not supported. */
+#undef inline

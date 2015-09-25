@@ -1,0 +1,111 @@
+1999-12-07
+	The adventure begins!  Created a new source directory, and started
+	copying sample code into it.
+
+1999-12-14
+	Sent Blursk 1.0 to Olle at xmms.org.
+
+2000-01-08
+	Added every feature that I wanted to add, except full-screen.
+	I also have a long list of requests from other people.
+
+2000-03-14
+	Added full-screen mode.  Unfortunately, XMMS' full-screen functions
+	depend on dynamically-linked versions of the -lXxf86vm and -lXxf86dga
+	but the default distribution of XFree86 only compiled statically-
+	linked versions of those libraries.  For testing, I got around that
+	by adding /usr/X11R6/lib/libXxf86vm.a and /usr/X11R6/lib/libXxf86dga.a
+	to the XMMS link command.  I did *NOT* try adding it to Blursk's link
+	line, because I believe that would cause problems if two or more
+	plugins did that.
+
+	I don't know how to make autoconf test whether a dynamic version of
+	a library is available, so I disabled full-screen mode.
+
+2001-09-10
+	Changed the way presets are stored.  Now they're in a separate file,
+	so they should be easier to share.
+
+	Color is now included in presets.
+
+	A new "Random preset on quiet" setting causes one of the other
+	presets to be selected randomly during each quiet period -- which
+	will hopefully change the settings for each song.
+
+	Added a few more colormaps, blur motions, rendering methods, etc.
+
+	Added the ability to "paste" configuration strings into Blursk by
+	middle-clicking on the Blursk window.
+
+2002-09-16
+	Version 1.2 released
+
+2002-01-11
+	Added fullscreen support via the XVideo extension.
+
+	Added an "Advanced" configuration dialog, mostly for setting the
+	fullscreen options.
+
+2002-05-30
+	Fixed the bug that caused the stored window position to be slightly
+	off.  Now, it should be restored to the exact position.
+
+	Fixed a bug in the "beat sensitivity" slider.  Apparently it was
+	damaged at some time when it wasn't on any config window.  It still
+	doesn't have as much impact as I'd hoped, but at least it does, works.
+
+	Replaced "random dots" with a more versatile "floaters" feature.
+
+	Added support for a variety of background modes -- it won't always
+	have a black background anymore!
+
+	Added a few more blur motions, plot styles, etc.
+
+	Added an option to fine-tune the blurring style.  This one is subtle!
+	I added it because I noticed that in some modes, a lot of the pixels
+	seemed to vibrate using the normal "Area smooth"; the "Edge smooth"
+	fixes that, but causes large areas to show a checkerboard pattern,
+	which doesn't look as good when using the XVideo fullscreen mode.
+
+2002-06-02
+	Modified the XVideo fullscreen modes to use planar video modes.
+	MPEG players use planar modes, so they're probably more stable.
+
+	Added support for the ZXCVB keys in fullscreen mode -- they now
+	control XMMS' main buttons.
+
+	Removed support for the "filter" option.
+
+	Added a new "show window title" option.  Sawfish needs it; without
+	this option, it ignored Blursks requested position, and instead
+	places the window in the least useful possible position.
+
+2002-06-14
+	Modified the "Use XV" full-screen method to minimize artifacts
+
+	Added a "show info" option, which adds the track title to the image.
+
+	Lots of minor tweaks & bug fixes.
+
+2002-06-15
+	Fixed a bug: If the window was positioned off-screen, then the
+	initialization code was supposed to move it back on-screen.  There
+	was a bug in this, but it is fixed now.
+
+	Added "Flame" to the list of color styles that work well with
+	"Bump Effect".
+
+	When "Milky" is used with "Bump effect", the flat area color is now
+	influenced by the background color instead of the base color.
+	(Actually, a little of the base color is still blended in with it;
+	I thought that looked a little more interesting.)
+
+2002-06-16
+	Made changes in the title be treated like quiet -- it triggers the
+	"Random preset on quiet" or "Random quiet" settings.
+
+2002-06-17
+	Added <i> key to show info even if info is normally disabled.
+
+	Made the info text shimmer.  Also, it will no longer leave a blur
+	trail in Fast CPU/Normal effect modes.

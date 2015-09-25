@@ -1,0 +1,26 @@
+1999-12-07
+	The adventure begins!  Created a new source directory, and started
+	copying sample code into it.
+
+1999-12-14
+	Sent Blursk 1.0 to Olle at xmms.org.
+
+2000-01-08
+	Added every feature that I wanted to add, except full-screen.
+	I also have a long list of requests from other people.
+
+2000-03-14
+	Added full-screen mode.  Unfortunately, XMMS' full-screen functions
+	depend on dynamically-linked versions of the -lXxf86vm and -lXxf86dga
+	but the default distribution of XFree86 only compiled statically-
+	linked versions of those libraries.  For testing, I got around that
+	by adding /usr/X11R6/lib/libXxf86vm.a and /usr/X11R6/lib/libXxf86dga.a
+	to the XMMS link command.  I did *NOT* try adding it to Blursk's link
+	line, because I believe that would cause problems if two or more
+	plugins did that.
+
+	I don't know how to make autoconf test whether a dynamic version of
+	a library is available, so I disabled full-screen mode.
+
+2000-12-11
+	Turned Blursk maintenance over to Josh Huber.
